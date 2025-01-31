@@ -5,8 +5,8 @@ import { Childful } from "@/types";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "#define GAMES",
-  description: "We define what games are",
+  title: "Define Games",
+  description: "A game development studio founded by Phil Filippak in 2025",
 };
 
 export default function RootLayout({ children }: Childful): JSX.Element {
