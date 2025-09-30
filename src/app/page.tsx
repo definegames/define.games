@@ -68,7 +68,7 @@ export default function SearchPage(): JSX.Element {
                           game studio.
                         </p>
                         <p className="text-gray-600 italic text-sm mt-2">
-                          &quot;define.games creates games—someone has to and... everyone else will&quot;
+                          &quot;define.games creates good games—someone has to and no one else will&quot;
                         </p>
                       </div>
                     </div>
