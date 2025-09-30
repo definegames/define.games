@@ -89,10 +89,16 @@ export default function ImageGallery({
             {/* Close Button */}
             <button
               className="absolute top-4 right-4 text-white hover:text-gray-300 text-xl z-10
-                bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
+                bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center
+                leading-none"
               onClick={closeModal}
             >
-              ×
+              <span
+                className="flex items-center justify-center w-full h-full"
+                style={{ marginTop: -4 }} // Do not remove this, it aligns the text vertically
+              >
+                ×
+              </span>
             </button>
 
             {/* Navigation Buttons */}
@@ -101,24 +107,34 @@ export default function ImageGallery({
                 <button
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white
                     hover:text-gray-300 text-3xl z-10 bg-black bg-opacity-50 rounded-full
-                    w-12 h-12 flex items-center justify-center"
+                    w-12 h-12 flex items-center justify-center leading-none"
                   onClick={(e) => {
                     e.stopPropagation();
                     navigateImage("prev");
                   }}
                 >
-                  ‹
+                  <span
+                    className="flex items-center justify-center w-full h-full"
+                    style={{ marginTop: -8 }} // Do not remove this, it aligns the text vertically
+                  >
+                    ‹
+                  </span>
                 </button>
                 <button
                   className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white
                     hover:text-gray-300 text-3xl z-10 bg-black bg-opacity-50 rounded-full
-                    w-12 h-12 flex items-center justify-center"
+                    w-12 h-12 flex items-center justify-center leading-none"
                   onClick={(e) => {
                     e.stopPropagation();
                     navigateImage("next");
                   }}
                 >
-                  ›
+                  <span
+                    className="flex items-center justify-center w-full h-full"
+                    style={{ marginTop: -8 }} // Do not remove this, it aligns the text vertically
+                  >
+                    ›
+                  </span>
                 </button>
               </>
             )}

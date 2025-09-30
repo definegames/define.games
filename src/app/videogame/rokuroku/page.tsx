@@ -81,11 +81,10 @@ export default function RokurokuPage(): JSX.Element {
                   "/images/rokuroku/03-screenshots/screenshot-001.png",
                   "/images/rokuroku/03-screenshots/screenshot-002.png",
                 ]}
-                gridCols="grid-cols-1"
+                gridCols="grid-cols-1 sm:grid-cols-2"
                 aspectRatio="square"
                 imageSize={{ width: 600, height: 600 }}
                 gap="gap-6"
-                className="max-w-2xl mx-auto"
               />
             </section>
           </div>
