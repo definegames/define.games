@@ -109,18 +109,18 @@ export default function SearchPage(): JSX.Element {
                       <span className="text-gray-400">›</span>
                       <span className="text-gray-600">videogame</span>
                       <span className="text-gray-400">›</span>
-                      <span className="text-gray-600">wait-and-bleed</span>
+                      <span className="text-gray-600">rokuroku</span>
                     </div>
                   </div>
                   <h3>
                     <span className="text-xl sm:text-2xl text-blue-700 hover:underline cursor-pointer">
-                      Wait & Bleed (working title)
+                      Rokuroku Battlefield「六六戦場」
                     </span>
                   </h3>
                   <p className="text-sm text-gray-700 mt-2 leading-relaxed">
-                    A turn-based MOBA game about the confrontation between AI and Yokai. Set in an eclectic world
-                    comprising elements of Japan across various historical periods, featuring multiple play modes
-                    including one derived from the classic MOBA genre.
+                    A turn-based MOBA game set amidst the confrontation between AI and Yokai, happening in an eclectic
+                    world of different historical periods in Japan, the game features various play modes including one
+                    derived from the classic MOBA genre.
                   </p>
                   <div className="mt-2 flex items-center gap-2 sm:gap-4 text-xs sm:text-sm flex-wrap">
                     <span className="px-2 py-1 bg-purple-50 text-purple-700 rounded">Videogame</span>
