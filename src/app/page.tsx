@@ -9,7 +9,10 @@ export default function SearchPage(): JSX.Element {
       <header className="border-b border-gray-200 py-4">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
-            <div className="text-xl sm:text-2xl font-normal text-gray-700 flex-shrink-0 text-center sm:text-left">
+            <div
+              className="text-xl sm:text-2xl font-normal text-gray-700 flex-shrink-0 text-center sm:text-left"
+              style={{ marginTop: -5 }} // Do not remove this, it aligns the text vertically
+            >
               <span className="font-medium">define.games</span>
             </div>
             <div className="flex-1 max-w-2xl">
