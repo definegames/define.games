@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Image from "next/image";
+import ImageGallery from "@/components/ImageGallery";
 
 const ROOT_URL = "https://define.games";
 
@@ -40,82 +40,53 @@ export default function RokurokuPage(): JSX.Element {
             {/* References Section */}
             <section className="mb-8">
               <h3 className="text-xl sm:text-2xl text-gray-800 font-medium mb-4">References</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                {[
+              <ImageGallery
+                images={[
                   "/images/rokuroku/01-references/ref-001.jpg",
                   "/images/rokuroku/01-references/ref-002.jpg",
                   "/images/rokuroku/01-references/ref-003.jpg",
                   "/images/rokuroku/01-references/ref-004.jpg",
                   "/images/rokuroku/01-references/ref-005.jpg",
                   "/images/rokuroku/01-references/ref-006.jpg",
-                ].map((imagePath, index) => (
-                  <div
-                    key={index}
-                    className="aspect-square bg-gray-100 rounded-lg border border-gray-200 overflow-hidden
-                      hover:shadow-md transition-shadow cursor-pointer"
-                  >
-                    <Image
-                      src={imagePath}
-                      alt={`Reference image ${index + 1}`}
-                      width={300}
-                      height={300}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+                ]}
+                gridCols="grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+                aspectRatio="square"
+                imageSize={{ width: 300, height: 300 }}
+                gap="gap-4"
+              />
             </section>
 
             {/* Concept Art Section */}
             <section className="mb-8">
               <h3 className="text-xl sm:text-2xl text-gray-800 font-medium mb-4">Concept Art</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
+              <ImageGallery
+                images={[
                   "/images/rokuroku/02-concept-art/concept-art-001.jpg",
                   "/images/rokuroku/02-concept-art/concept-art-002.jpg",
                   "/images/rokuroku/02-concept-art/concept-art-003.jpg",
                   "/images/rokuroku/02-concept-art/concept-art-004.jpg",
-                ].map((imagePath, index) => (
-                  <div
-                    key={index}
-                    className="aspect-square bg-gray-100 rounded-lg border border-gray-200 overflow-hidden
-                      hover:shadow-md transition-shadow cursor-pointer"
-                  >
-                    <Image
-                      src={imagePath}
-                      alt={`Concept art ${index + 1}`}
-                      width={600}
-                      height={600}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+                ]}
+                gridCols="grid-cols-1 sm:grid-cols-2"
+                aspectRatio="square"
+                imageSize={{ width: 600, height: 600 }}
+                gap="gap-6"
+              />
             </section>
 
             {/* Screenshots Section */}
             <section className="mb-8">
               <h3 className="text-xl sm:text-2xl text-gray-800 font-medium mb-4">Screenshots</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
+              <ImageGallery
+                images={[
                   "/images/rokuroku/03-screenshots/screenshot-001.png",
                   "/images/rokuroku/03-screenshots/screenshot-002.png",
-                ].map((imagePath, index) => (
-                  <div
-                    key={index}
-                    className="aspect-square bg-gray-100 rounded-lg border border-gray-200 overflow-hidden
-                      hover:shadow-md transition-shadow cursor-pointer max-w-2xl mx-auto"
-                  >
-                    <Image
-                      src={imagePath}
-                      alt={`Screenshot ${index + 1}`}
-                      width={600}
-                      height={600}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+                ]}
+                gridCols="grid-cols-1"
+                aspectRatio="square"
+                imageSize={{ width: 600, height: 600 }}
+                gap="gap-6"
+                className="max-w-2xl mx-auto"
+              />
             </section>
           </div>
 
