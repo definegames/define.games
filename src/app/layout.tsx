@@ -5,7 +5,7 @@ import { Childful } from "@/types";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Define Games",
+  title: "define.games",
   description: "A game development studio founded by Phil Filippak in 2025",
 };
 
