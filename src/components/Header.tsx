@@ -13,7 +13,7 @@ export default function Header({ searchQuery = "define games" }: HeaderProps): J
   const [isAnimating, setIsAnimating] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const targetText = "define games";
+  const targetText = searchQuery;
 
   const animateCorrection = (currentText: string, targetText: string): void => {
     setIsAnimating(true);
@@ -70,7 +70,7 @@ export default function Header({ searchQuery = "define games" }: HeaderProps): J
     const newValue = e.target.value;
     setInputValue(newValue);
 
-    // Clear existing timeouts
+    // Clear existing timeouts and stop any ongoing animation
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
@@ -78,8 +78,13 @@ export default function Header({ searchQuery = "define games" }: HeaderProps): J
       clearTimeout(animationTimeoutRef.current);
     }
 
+    // If animation was running, stop it
+    if (isAnimating) {
+      setIsAnimating(false);
+    }
+
     // If the user has typed something different from the target
-    if (newValue !== targetText && !isAnimating) {
+    if (newValue !== targetText) {
       // Wait 1 second before starting the correction animation
       timeoutRef.current = setTimeout(() => {
         animateCorrection(newValue, targetText);
@@ -120,6 +125,10 @@ export default function Header({ searchQuery = "define games" }: HeaderProps): J
                 type="text"
                 value={inputValue}
                 onChange={handleInputChange}
+                spellCheck="false"
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
                 className="flex-grow text-gray-700 text-sm bg-transparent outline-none"
               />
               <div className="flex items-center gap-2 sm:gap-3">
