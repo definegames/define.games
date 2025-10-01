@@ -9,7 +9,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "define.games",
-  description: "A game development studio founded by Phil Filippak in 2025",
+  description: "A game development studio founded by Phil Filippak in 2024",
 };
 
 export default function RootLayout({ children }: Childful): JSX.Element {
