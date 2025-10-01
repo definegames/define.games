@@ -1,6 +1,18 @@
+"use client";
+
 import Header from "@/components/Header";
+import { useState } from "react";
 
 const ROOT_URL = "https://define.games";
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyJ3aVRur8DWT0lbEXYM9AsFPg-D6a2ieAfcnX2xr66mBA8QmZWRXR2JA1sVc7PXppl/exec";
+
+const CLASSES_BY_STATUS = {
+  idle: "",
+  loading: "",
+  success: "bg-green-50 text-green-700 border border-green-200",
+  error: "bg-red-50 text-red-700 border border-red-200",
+};
 
 export default function B2BAISaaSPage(): JSX.Element {
   return (
@@ -27,140 +39,92 @@ export default function B2BAISaaSPage(): JSX.Element {
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
               A dynamic and hilarious party game for 3 to 12 players. Join a startup and attempt to build a successful
-              product without going bankrupt. Each player has their own role and hidden objectives in this satirical
-              take on startup culture.
+              product without going bankrupt. Or go bankrupt in a hilarious way! There are many ways to win. Each player
+              has their own role and hidden objectives in this satirical take on the modern Silicon Valley startup
+              culture.
             </p>
-          </div>
+            <br />
+            <p className="text-lg text-gray-700 leading-relaxed">
+              If you want to get notified when there are any news, please leave your email:
+            </p>
 
-          {/* Project Description */}
-          <div className="prose prose-gray max-w-none">
-            <h2 className="text-2xl sm:text-3xl text-gray-900 font-normal mb-6">About the Game</h2>
-
-            <div className="space-y-6 text-gray-700 leading-relaxed">
-              <p className="text-base sm:text-lg">
-                B2B AI SaaS is a satirical party game that captures the absurdity and chaos of modern startup culture.
-                Players navigate the treacherous waters of building a tech company, complete with buzzword-heavy
-                meetings, pivot decisions, and the constant threat of running out of runway.
-              </p>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">How to Play</h3>
-              <p>
-                Each player takes on a specific role within the startup - from the visionary CEO to the overworked
-                developer, the smooth-talking sales lead to the budget-conscious CFO. Every role comes with unique
-                abilities, secret objectives, and conflicting interests that create natural tension and hilarious
-                situations.
-              </p>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">Game Mechanics</h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>
-                  <strong>Resource Management:</strong> Balance funding, time, and team morale while building your
-                  product
-                </li>
-                <li>
-                  <strong>Market Pivots:</strong> Adapt your strategy as market conditions and customer needs change
-                </li>
-                <li>
-                  <strong>Hidden Objectives:</strong> Complete personal goals that may conflict with company success
-                </li>
-                <li>
-                  <strong>Buzzword Bingo:</strong> Gain advantages by successfully incorporating startup jargon
-                </li>
-                <li>
-                  <strong>Crisis Events:</strong> Navigate unexpected challenges like competitor launches or funding
-                  freezes
-                </li>
-              </ul>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">Player Roles</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                <div className="p-4 border border-gray-200 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">The CEO</h4>
-                  <p className="text-sm">
-                    Makes final decisions and sets company direction. Wins by achieving unicorn status, but must keep
-                    all stakeholders happy.
-                  </p>
-                </div>
-                <div className="p-4 border border-gray-200 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">The Developer</h4>
-                  <p className="text-sm">
-                    Builds the actual product while fighting against unrealistic deadlines and constantly changing
-                    requirements.
-                  </p>
-                </div>
-                <div className="p-4 border border-gray-200 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">The Sales Lead</h4>
-                  <p className="text-sm">
-                    Promises features that don&apos;t exist yet and tries to close deals to keep the company afloat.
-                  </p>
-                </div>
-                <div className="p-4 border border-gray-200 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">The CFO</h4>
-                  <p className="text-sm">
-                    Manages the burn rate and tries to prevent the company from spending money on unnecessary
-                    &quot;innovations.&quot;
-                  </p>
-                </div>
-                <div className="p-4 border border-gray-200 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">The Investor</h4>
-                  <p className="text-sm">
-                    Provides funding but expects exponential growth and may have conflicting interests with the team.
-                  </p>
-                </div>
-                <div className="p-4 border border-gray-200 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">The Marketing Manager</h4>
-                  <p className="text-sm">
-                    Creates hype around the product while trying to translate technical features into customer benefits.
-                  </p>
-                </div>
-              </div>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">Victory Conditions</h3>
-              <p>The game can end in multiple ways, and different players may have different victory conditions:</p>
-              <ul className="list-disc list-inside space-y-2 mt-4">
-                <li>
-                  <strong>Company Success:</strong> The startup reaches profitability or gets acquired
-                </li>
-                <li>
-                  <strong>Personal Success:</strong> Individual players complete their secret objectives
-                </li>
-                <li>
-                  <strong>Spectacular Failure:</strong> Sometimes everyone &quot;wins&quot; by creating the most
-                  entertaining crash and burn
-                </li>
-              </ul>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">Game Components</h3>
-              <div className="bg-gray-50 p-6 rounded-lg mt-6">
-                <ul className="list-disc list-inside space-y-2">
-                  <li>120+ Event cards featuring real startup scenarios (slightly exaggerated)</li>
-                  <li>12 Role cards with unique abilities and secret objectives</li>
-                  <li>Resource tokens (Funding, Time, Morale, Technical Debt)</li>
-                  <li>Product development board with milestone tracks</li>
-                  <li>Market condition dice and customer feedback cards</li>
-                  <li>Buzzword reference guide (for authentic startup communication)</li>
-                </ul>
-              </div>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">Development Status</h3>
-              <p>
-                Currently in playtesting phase with various startup communities and board game groups. The game
-                mechanics have been refined through extensive testing, and we&apos;re now focusing on balancing the
-                humor with engaging gameplay. The goal is to create a game that&apos;s both funny for those familiar
-                with startup culture and accessible to those who aren&apos;t.
-              </p>
-
-              <div className="bg-blue-50 p-6 rounded-lg mt-8">
-                <h4 className="font-semibold text-blue-900 mb-2">Coming Soon</h4>
-                <p className="text-blue-800">
-                  Expected release date: Q2 2026. The game will be available as both a physical tabletop version and a
-                  digital adaptation for online play.
-                </p>
-              </div>
-            </div>
+            {/* Email Collection Form */}
+            <EmailCollectionForm />
           </div>
         </div>
       </main>
+    </div>
+  );
+}
+
+function EmailCollectionForm(): JSX.Element {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent): Promise<void> => {
+    e.preventDefault();
+
+    if (!email) {
+      setStatus("error");
+      setMessage("Please enter a valid email address");
+      return;
+    }
+
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors", // Required for Google Apps Script
+        body: JSON.stringify({ email: email }),
+      });
+
+      // Since we're using no-cors mode, we can't read the response
+      // We'll assume success if no error is thrown
+      setStatus("success");
+      setMessage("Thank you! We'll keep you updated on our progress.");
+      setEmail("");
+    } catch (error) {
+      console.error("Error submitting email:", error);
+      setStatus("error");
+      setMessage("Something went wrong. Please try again later.");
+    }
+  };
+
+  return (
+    <div className="mt-8 p-6 bg-gray-50 rounded-lg">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email address"
+            className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2
+              focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-900
+              placeholder-gray-500"
+            disabled={status === "loading"}
+          />
+          <button
+            type="submit"
+            disabled={status === "loading" || !email}
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700
+              focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50
+              disabled:cursor-not-allowed transition-colors font-medium"
+          >
+            {status === "loading" ? "Submitting..." : "Notify Me"}
+          </button>
+        </div>
+
+        {message && <div className={`p-3 rounded-lg text-sm ${CLASSES_BY_STATUS[status]}`}>{message}</div>}
+      </form>
+
+      <p className="mt-3 text-xs text-gray-500">
+        We respect your privacy. Your email will only be used for game updates and will never be shared.
+      </p>
     </div>
   );
 }
