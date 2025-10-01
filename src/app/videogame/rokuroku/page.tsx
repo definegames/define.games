@@ -27,10 +27,12 @@ export default function RokurokuPage(): JSX.Element {
               <span className="px-2 py-1 bg-green-50 text-green-700 rounded">MOBA</span>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              A turn-based MOBA game set amidst the confrontation between AI and Yokai, happening in an eclectic world
-              of different historical periods in Japan, the game features various play modes including one derived from
-              the classic MOBA genre.
+              A turn-based MOBA game set amidst the confrontation between AI and Yokai, happening in an eclectic fusion
+              of historical periods in Japan, the game features various play modes including one derived from the
+              classic MOBA genre.
             </p>
+            <br />
+            <p className="text-lg text-gray-700 leading-relaxed">Currently in pre-production.</p>
           </div>
 
           {/* Images Section */}
@@ -75,7 +77,7 @@ export default function RokurokuPage(): JSX.Element {
 
             {/* Screenshots Section */}
             <section className="mb-8">
-              <h3 className="text-xl sm:text-2xl text-gray-800 font-medium mb-4">Screenshots</h3>
+              <h3 className="text-xl sm:text-2xl text-gray-800 font-medium mb-4">Technical prototype screenshots</h3>
               <ImageGallery
                 images={[
                   "/images/rokuroku/03-screenshots/screenshot-001.png",
@@ -87,58 +89,6 @@ export default function RokurokuPage(): JSX.Element {
                 gap="gap-6"
               />
             </section>
-          </div>
-
-          {/* Project Description */}
-          <div className="prose prose-gray max-w-none">
-            <h2 className="text-2xl sm:text-3xl text-gray-900 font-normal mb-6">About the Project</h2>
-
-            <div className="space-y-6 text-gray-700 leading-relaxed">
-              <p className="text-base sm:text-lg">
-                Rokuroku is an ambitious turn-based MOBA that bridges the gap between traditional strategy games and
-                modern competitive gaming. Set in a unique universe where artificial intelligence clashes with ancient
-                Japanese supernatural forces, the game offers players a rich tactical experience across multiple
-                historical periods.
-              </p>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">Core Gameplay</h3>
-              <p>
-                Players command teams of either AI units or Yokai entities in strategic turn-based combat. Each faction
-                brings unique abilities, strengths, and tactical approaches to the battlefield. The turn-based nature
-                allows for deep strategic planning while maintaining the competitive spirit of traditional MOBA games.
-              </p>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">Setting & Atmosphere</h3>
-              <p>
-                The game takes place across various historical periods of Japan, from ancient feudal times to
-                speculative futures. Each battlefield reflects different eras, creating a visual and thematic journey
-                through time. The contrast between high-tech AI forces and mystical Yokai creates a unique aesthetic
-                that blends cyberpunk elements with traditional Japanese folklore.
-              </p>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">Game Modes</h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>
-                  <strong>Classic MOBA:</strong> Traditional 5v5 matches with lanes, towers, and a central objective
-                </li>
-                <li>
-                  <strong>Skirmish:</strong> Smaller 3v3 battles focused on pure tactical combat
-                </li>
-                <li>
-                  <strong>Campaign:</strong> Single-player story mode exploring the conflict between AI and Yokai
-                </li>
-                <li>
-                  <strong>Arena:</strong> 1v1 duels for competitive ranking
-                </li>
-              </ul>
-
-              <h3 className="text-xl font-medium text-gray-900 mt-8 mb-4">Development Status</h3>
-              <p>
-                Currently in pre-production, focusing on core gameplay mechanics, art direction, and world building. The
-                development team is committed to creating a game that respects both the strategic depth of classic
-                strategy games and the competitive balance required for modern esports.
-              </p>
-            </div>
           </div>
         </div>
       </main>
