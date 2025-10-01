@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Link from "next/link";
 
@@ -5,11 +6,11 @@ const ROOT_URL = "https://define.games";
 
 export default function SearchPage(): JSX.Element {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Header />
 
       {/* Main Content */}
-      <main className="py-4 sm:py-6">
+      <main className="py-4 sm:py-6 flex-grow">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="sm:flex sm:gap-8">
             {/* Logo spacer to match header alignment - hidden on mobile */}
@@ -138,6 +139,8 @@ export default function SearchPage(): JSX.Element {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

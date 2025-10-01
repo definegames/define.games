@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ImageGallery from "@/components/ImageGallery";
 
@@ -5,11 +6,11 @@ const ROOT_URL = "https://define.games";
 
 export default function RokurokuPage(): JSX.Element {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Header searchQuery="Rokuroku" />
 
       {/* Main Content */}
-      <main className="py-4 sm:py-6">
+      <main className="py-4 sm:py-6 flex-grow">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           {/* Page Title */}
           <div className="mb-6 sm:mb-8">
@@ -92,6 +93,8 @@ export default function RokurokuPage(): JSX.Element {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }
