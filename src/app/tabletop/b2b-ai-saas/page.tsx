@@ -40,9 +40,7 @@ export default function B2BAISaaSPage(): JSX.Element {
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
               A dynamic and hilarious party game for 3 to 12 players. Join a startup and attempt to build a successful
-              product without going bankrupt. Or go bankrupt in a hilarious way! There are many ways to win. Each player
-              has their own role and hidden objectives in this satirical take on the modern Silicon Valley startup
-              culture.
+              product without going bankrupt. Or go bankrupt in a hilarious way! There are many ways to win...
             </p>
             <br />
             <p className="text-lg text-gray-700 leading-relaxed">
