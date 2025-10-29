@@ -15,10 +15,10 @@ const CLASSES_BY_STATUS = {
   error: "bg-red-50 text-red-700 border border-red-200",
 };
 
-export default function B2BAISaaSPage(): JSX.Element {
+export default function B2BAIDatingSaaSPage(): JSX.Element {
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Header searchQuery="B2B AI SaaS" />
+      <Header searchQuery="B2B AI Dating SaaS" />
 
       {/* Main Content */}
       <main className="py-4 sm:py-6 flex-grow">
@@ -30,9 +30,9 @@ export default function B2BAISaaSPage(): JSX.Element {
               <span className="text-gray-400">›</span>
               <span>tabletop</span>
               <span className="text-gray-400">›</span>
-              <span>b2b-ai-saas</span>
+              <span>b2b-ai-dating-saas</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl text-gray-900 font-normal mb-2">B2B AI SaaS</h1>
+            <h1 className="text-3xl sm:text-4xl text-gray-900 font-normal mb-2">B2B AI Dating SaaS</h1>
             <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm flex-wrap mb-4">
               <span className="px-2 py-1 bg-orange-50 text-orange-700 rounded">Tabletop</span>
               <span className="px-2 py-1 bg-pink-50 text-pink-700 rounded">Party Game</span>

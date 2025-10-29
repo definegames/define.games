@@ -115,12 +115,15 @@ export default function SearchPage(): JSX.Element {
                       <span className="text-gray-400">›</span>
                       <span className="text-gray-600">tabletop</span>
                       <span className="text-gray-400">›</span>
-                      <span className="text-gray-600">b2b-ai-saas</span>
+                      <span className="text-gray-600">b2b-ai-dating-saas</span>
                     </div>
                   </div>
                   <h3>
-                    <Link href="/tabletop/b2b-ai-saas" className="text-xl sm:text-2xl text-blue-700 hover:underline">
-                      B2B AI SaaS
+                    <Link
+                      href="/tabletop/b2b-ai-dating-saas"
+                      className="text-xl sm:text-2xl text-blue-700 hover:underline"
+                    >
+                      B2B AI Dating SaaS
                     </Link>
                   </h3>
                   <p className="text-sm text-gray-700 mt-2 leading-relaxed">
