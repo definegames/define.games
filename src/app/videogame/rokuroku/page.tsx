@@ -59,23 +59,6 @@ export default function RokurokuPage(): JSX.Element {
               />
             </section>
 
-            {/* Concept Art Section */}
-            <section className="mb-8">
-              <h3 className="text-xl sm:text-2xl text-gray-800 font-medium mb-4">Concept Art</h3>
-              <ImageGallery
-                images={[
-                  "/images/rokuroku/02-concept-art/concept-art-001.jpg",
-                  "/images/rokuroku/02-concept-art/concept-art-002.jpg",
-                  "/images/rokuroku/02-concept-art/concept-art-003.jpg",
-                  "/images/rokuroku/02-concept-art/concept-art-004.jpg",
-                ]}
-                gridCols="grid-cols-1 sm:grid-cols-2"
-                aspectRatio="square"
-                imageSize={{ width: 600, height: 600 }}
-                gap="gap-6"
-              />
-            </section>
-
             {/* Screenshots Section */}
             <section className="mb-8">
               <h3 className="text-xl sm:text-2xl text-gray-800 font-medium mb-4">Technical prototype screenshots</h3>
