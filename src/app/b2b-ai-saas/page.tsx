@@ -57,6 +57,21 @@ export default function B2BAISaaSPage(): JSX.Element {
               gap="gap-4"
             />
             <br />
+            <div className="mt-4">
+              <div className="relative w-full overflow-hidden rounded-2xl shadow-lg" style={{ paddingTop: "56.25%" }}>
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src="https://www.youtube.com/embed/AoanLfcMEIs"
+                  title="B2B AI SaaS gameplay trailer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+              <p className="mt-3 text-sm text-gray-600">
+                Get a feel for the gameplay and the background story behind the game in this short video.
+              </p>
+            </div>
             <br />
             <p className="text-lg text-gray-700 leading-relaxed">
               Interested? You are always welcome in our community!
