@@ -2,6 +2,8 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ImageGallery from "@/components/ImageGallery";
+import Link from "next/link";
 import { useState } from "react";
 
 const ROOT_URL = "https://define.games";
@@ -32,20 +34,51 @@ export default function B2BAISaaSPage(): JSX.Element {
             </div>
             <h1 className="text-3xl sm:text-4xl text-gray-900 font-normal mb-2">B2B AI SaaS</h1>
             <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm flex-wrap mb-4">
-              <span className="px-2 py-1 bg-orange-50 text-orange-700 rounded">Tabletop</span>
-              <span className="px-2 py-1 bg-pink-50 text-pink-700 rounded">Party Game</span>
-              <span className="px-2 py-1 bg-yellow-50 text-yellow-700 rounded">3-12 players</span>
+              <span className="px-2 py-1 bg-orange-50 text-orange-700 rounded">Board game</span>
+              <span className="px-2 py-1 bg-pink-50 text-pink-700 rounded">Party game</span>
+              <span className="px-2 py-1 bg-yellow-50 text-yellow-700 rounded">2-10 players</span>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              A dynamic and hilarious party game for 3 to 12 players. Join a startup and attempt to build a successful
-              product without going bankrupt. Or go bankrupt in a hilarious way! There are many ways to win...
+              A dynamic and fun party game for 2 to 10 players. Start a startup and build a successful product. Reach
+              all the milestones before hitting the deadline. And move fast, or you will run out of funding! Each player
+              has their own role and hidden objectives in this satirical take on startup culture.
+            </p>
+            <br />
+            <ImageGallery
+              images={[
+                "/images/b2b-ai-saas/screenshot-001.jpg",
+                "/images/b2b-ai-saas/screenshot-002.png",
+                "/images/b2b-ai-saas/screenshot-003.jpeg",
+                "/images/b2b-ai-saas/photo-001.jpg",
+              ]}
+              gridCols="grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+              aspectRatio="square"
+              imageSize={{ width: 300, height: 300 }}
+              gap="gap-4"
+            />
+            <br />
+            <br />
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Interested? You are always welcome in our community!
             </p>
             <br />
             <p className="text-lg text-gray-700 leading-relaxed">
-              If you want to get notified when there are any news, please leave your email:
+              <Link
+                href="https://discord.gg/86bymhTWWn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-1.5 bg-blue-600/10 text-blue-700 rounded-lg \
+                font-medium transition-colors hover:bg-blue-600 hover:text-white"
+                aria-label="Discord"
+              >
+                Join our Discord server!
+              </Link>
+            </p>
+            <br />
+            <p className="text-lg text-gray-700 leading-relaxed">
+              In case you want to learn when we release the game, please leave your email:
             </p>
 
-            {/* Email Collection Form */}
             <EmailCollectionForm />
           </div>
         </div>

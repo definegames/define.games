@@ -120,14 +120,12 @@ export default function SearchPage(): JSX.Element {
                     </Link>
                   </h3>
                   <p className="text-sm text-gray-700 mt-2 leading-relaxed">
-                    A dynamic and hilarious party game for 3 to 12 players. Join a startup and attempt to build a
-                    successful product without going bankrupt. Each player has their own role and hidden objectives in
-                    this satirical take on startup culture.
+                    A dynamic and fun party game for 2 to 10 players. Start a startup and build a successful product.
                   </p>
                   <div className="mt-2 flex items-center gap-2 sm:gap-4 text-xs sm:text-sm flex-wrap">
-                    <span className="px-2 py-1 bg-orange-50 text-orange-700 rounded">Tabletop</span>
-                    <span className="px-2 py-1 bg-pink-50 text-pink-700 rounded">Party Game</span>
-                    <span className="px-2 py-1 bg-yellow-50 text-yellow-700 rounded">3-12 players</span>
+                    <span className="px-2 py-1 bg-orange-50 text-orange-700 rounded">Board game</span>
+                    <span className="px-2 py-1 bg-pink-50 text-pink-700 rounded">Party game</span>
+                    <span className="px-2 py-1 bg-yellow-50 text-yellow-700 rounded">2-10 players</span>
                   </div>
                 </article>
               </div>
