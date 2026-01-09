@@ -17,8 +17,6 @@ export default function RokurokuPage(): JSX.Element {
             <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm mb-2 flex-wrap text-gray-600">
               <span className="text-gray-700">{ROOT_URL}</span>
               <span className="text-gray-400">›</span>
-              <span>videogame</span>
-              <span className="text-gray-400">›</span>
               <span>rokuroku</span>
             </div>
             <h1 className="text-3xl sm:text-4xl text-gray-900 font-normal mb-2">Rokuroku 「六六戦場」</h1>

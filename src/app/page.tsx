@@ -85,13 +85,11 @@ export default function SearchPage(): JSX.Element {
                     <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm mb-1 flex-wrap">
                       <span className="text-gray-700">{ROOT_URL}</span>
                       <span className="text-gray-400">›</span>
-                      <span className="text-gray-600">videogame</span>
-                      <span className="text-gray-400">›</span>
                       <span className="text-gray-600">rokuroku</span>
                     </div>
                   </div>
                   <h3>
-                    <Link href="/videogame/rokuroku" className="text-xl sm:text-2xl text-blue-700 hover:underline">
+                    <Link href="/rokuroku" className="text-xl sm:text-2xl text-blue-700 hover:underline">
                       Rokuroku 「六六戦場」
                     </Link>
                   </h3>
@@ -113,13 +111,11 @@ export default function SearchPage(): JSX.Element {
                     <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm mb-1 flex-wrap">
                       <span className="text-gray-700">{ROOT_URL}</span>
                       <span className="text-gray-400">›</span>
-                      <span className="text-gray-600">tabletop</span>
-                      <span className="text-gray-400">›</span>
                       <span className="text-gray-600">b2b-ai-saas</span>
                     </div>
                   </div>
                   <h3>
-                    <Link href="/tabletop/b2b-ai-saas" className="text-xl sm:text-2xl text-blue-700 hover:underline">
+                    <Link href="/b2b-ai-saas" className="text-xl sm:text-2xl text-blue-700 hover:underline">
                       B2B AI SaaS
                     </Link>
                   </h3>
